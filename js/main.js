@@ -43,7 +43,6 @@ const productsContainer=document.getElementById('products-container');
 const searchInput=document.getElementById('search-input');
 const categoryButtons=document.querySelectorAll('.category-tabs button');
 
-// Render Products
 function renderProducts(filter='',category='all'){
   if(!productsContainer) return;
   productsContainer.innerHTML='';
@@ -90,7 +89,7 @@ function getCurrentCategory(){
   return active?active.dataset.category:'all';
 }
 
-// Smooth Scroll for Same-Page Anchors Only
+
 document.querySelectorAll('.btn').forEach(btn=>{
   const href = btn.getAttribute('href');
   if(href && href.startsWith('#')){
