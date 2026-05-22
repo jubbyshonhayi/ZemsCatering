@@ -88,7 +88,7 @@ function renderMessage(text, from) {
 
   div.innerText = text;
 
-  // ✅ WhatsApp handoff for bot messages
+  //WhatsApp handoff for bot messages
   if (
     from === "bot" &&
     /order|price|book|urgent|emergency|catering|cake/i.test(text)
@@ -96,7 +96,7 @@ function renderMessage(text, from) {
     const wa = document.createElement("a");
     wa.href = WHATSAPP_LINK;
     wa.target = "_blank";
-    wa.innerText = "👉 Continue on WhatsApp";
+    wa.innerText = "==> Continue on WhatsApp";
     wa.style = `
       display:block;
       margin-top:6px;
@@ -113,7 +113,7 @@ function renderMessage(text, from) {
 
 function showWelcomeMessage() {
   renderMessage(
-    "👋 Hi! Welcome to Zems Cakes & Catering. How can I help you today?",
+    "Hi! Welcome to Zems Cakes & Catering. How can I help you today?",
     "bot"
   );
 }
@@ -158,10 +158,10 @@ async function sendMessage() {
 
   const data = await res.json();
 
-  // ❌ REMOVE TYPING
+  
   typing.remove();
 
-  // ✅ SHOW BOT REPLY
+  
   renderMessage(data.reply, "bot");
 
   chatMemory.push({ role: "assistant", content: data.reply });
