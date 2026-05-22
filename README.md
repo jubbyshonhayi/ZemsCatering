@@ -2,9 +2,9 @@
 
 https://zemscakes.netlify.app/
 
-Zems Cakes & Catering is a modern bakery and catering website built with HTML, CSS, and JavaScript. The platform showcases cakes, catering services, and drinks in a clean and responsive interface designed to provide customers with a smooth browsing and ordering experience.
+Zems Cakes & Catering is a modern bakery and catering website built with HTML, CSS, JavaScript, and Netlify Functions. The platform showcases cakes, catering services, and drinks in a responsive and user-friendly interface designed to provide customers with a smooth browsing and ordering experience.
 
-Users can explore products, search through categories, and place orders directly through WhatsApp with pre-filled messages containing the selected product name and price.
+The website also includes a chatbot assistant and WhatsApp ordering integration for easier customer interaction and product inquiries.
 
 ## Features
 
@@ -14,9 +14,11 @@ Users can explore products, search through categories, and place orders directly
 - Cake and catering showcase
 - WhatsApp order integration
 - Pre-filled WhatsApp messages with product name and price
-- Smooth and modern UI
+- Integrated chatbot assistant
 - Mobile-friendly design
+- Smooth and modern UI
 - Static deployment with Netlify
+- Netlify serverless functions support
 
 ## Technologies Used
 
@@ -24,6 +26,7 @@ Users can explore products, search through categories, and place orders directly
 - CSS3
 - JavaScript
 - Netlify
+- Netlify Functions
 
 ## Project Structure
 
@@ -61,12 +64,21 @@ https://zemscakes.netlify.app/
 The website allows users to:
 
 - Browse cakes, catering services, and drinks
-- Search for products
-- Filter products by category
+- Search and filter products by category
 - View pricing information
-- Order directly via WhatsApp
+- Order products directly through WhatsApp
+- Interact with the chatbot assistant for quick help and information
 
-When users click the "Order Now" button, they are redirected to WhatsApp with a message containing the selected product name and price for quick and easy ordering.
+When users click the "Order Now" button, they are redirected to WhatsApp with a pre-filled message containing the selected product name and price.
+
+## Chatbot Functionality
+
+The chatbot system helps users interact with the website more easily by responding to questions and assisting with navigation and product inquiries.
+
+The chatbot logic is handled using:
+
+- `chatbot.js`
+- Netlify serverless function: `netlify/functions/chat.js`
 
 ## Getting Started
 
@@ -88,6 +100,7 @@ Open the `index.html` file in your browser.
 - User authentication
 - Admin dashboard for product management
 - Order tracking system
+- AI-powered chatbot improvements
 - Improved animations and transitions
 
 ## Author
