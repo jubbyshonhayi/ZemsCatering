@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us - Zems Cakes & Catering</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="container nav-container">
+    <div class="logo">Zems Cakes & Catering</div>
+    <nav>
+      <a href="index.html#hero">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="slider">
+    <div class="slide active" style="background-image: url('images/catering8.jpg');"></div>
+    <div class="slide" style="background-image: url('images/cake24.jpg');"></div>
+    <div class="slide" style="background-image: url('images/fruitcake.jpg');"></div>
+  </div>
+
+  <div class="hero-content">
+    <h1>About Zems Cakes & Catering</h1>
+    <p>Professional, delicious, and handcrafted</p>
+  </div>
+</section>
+
+
+<section class="container about-section">
+  <div class="about-card light-bg">
+    <h2>Our Story</h2>
+    <p>Started with a love for baking, Zems Catering brings handcrafted cakes and catering for unforgettable events.</p>
+  </div>
+  <div class="about-card dark-bg">
+    <h2>Our Mission</h2>
+    <p>Delivering quality, professionalism, and taste to every customer, for any celebration.</p>
+  </div>
+  <div class="about-card light-bg">
+    <h2>Our Values</h2>
+    <ul>
+      <li>Fresh Ingredients</li>
+      <li>Custom Orders</li>
+      <li>Professional Service</li>
+      <li>Fast Delivery</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Zems Cakes & Catering </p>
+</footer>
+
+<footer>
+  <p>© 2025 Zems Cakes & Catering</p>
+</footer>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let index = 0;
+
+  setInterval(() => {
+    slides[index].classList.remove('active');
+    index = (index + 1) % slides.length;
+    slides[index].classList.add('active');
+  }, 3000);
+</script>
+
+</body>
+</html>

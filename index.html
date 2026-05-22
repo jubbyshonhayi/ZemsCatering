@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zems Cakes & Catering </title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="container nav-container">
+    <div class="logo">Zems Cakes & Catering</div>
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="slider">
+    <div class="slide active" style="background-image: url('images/catering8.jpg');"></div>
+    <div class="slide" style="background-image: url('images/cake24.jpg');"></div>
+    <div class="slide" style="background-image: url('images/fruitcake.jpg');"></div>
+  </div>
+
+  <div class="hero-content">
+    <h1>Delicious Cakes & Catering</h1>
+    <p>Handcrafted with love for your celebrations</p>
+    <a href="#products" class="btn">Explore Products</a>
+  </div>
+</section>
+
+
+<section class="container product-showcase">
+  <h2>Featured Cakes</h2>
+  <div class="showcase-grid">
+    <img src="images/vanilla.jpg" alt="Vanilla Cake">
+    <img src="images/chocolate.jpg" alt="Chocolate Cake">
+    <img src="images/redvelvet.jpg" alt="Red Velvet Cake">
+    <img src="images/cake11.jpg" alt="cake">
+    <img src="images/cake9.jpg" alt="cakes">
+    <img src="images/cake15.jpg" alt="cakes">
+    <img src="images/cake12.jpg" alt="cakes">
+    <img src="images/cake10.jpg" alt="cakes">
+    <img src="images/cake2.jpg" alt="cakes">
+    <img src="images/cake1.jpg" alt="cakes">
+    <img src="images/cake19.jpg" alt="cakes">
+    <img src="images/cake13.jpg" alt="cakes">
+    <img src="images/cake4.jpg" alt="cakes">
+    <img src="images/cake18.jpg" alt="cakes">
+    <img src="images/cake3.jpg" alt="cakes">
+    <img src="images/cake6.jpg" alt="cakes">
+    <img src="images/cake14.jpg" alt="cakes">
+    <img src="images/fruitcake.jpg" alt="cakes">
+    <img src="images/cake23.jpg" alt="cakes">
+    <img src="images/cake17.jpg" alt="cakes">
+    <img src="images/cake22.jpg" alt="cakes">
+    <img src="images/cake20.jpg" alt="cakes">
+    <img src="images/cake5.jpg" alt="cakes">
+
+  </div>
+</section>
+
+
+<div id="chat-toggle">💬</div>
+<script src="./site-content.js"></script>
+<script src="./faq.js"></script>
+<script src="./chatbot.js"></script>
+
+
+
+<footer>
+  <p>© 2025 Zems Cakes & Catering</p>
+</footer>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let index = 0;
+
+  setInterval(() => {
+    slides[index].classList.remove('active');
+    index = (index + 1) % slides.length;
+    slides[index].classList.add('active');
+  }, 3000);
+</script>
+
+
+</body>
+</html>

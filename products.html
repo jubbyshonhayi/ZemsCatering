@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products - Zems Cakes & Catering</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="container nav-container">
+    <div class="logo">Zems Cakes & Catering</div>
+    <nav>
+      <a href="index.html#hero">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+<section class="hero">
+  <div class="slider">
+    <div class="slide active" style="background-image: url('images/catering8.jpg');"></div>
+    <div class="slide" style="background-image: url('images/cake24.jpg');"></div>
+    <div class="slide" style="background-image: url('images/fruitcake.jpg');"></div>
+  </div>
+
+  <div class="hero-content">
+    <h1>Our Products</h1>
+    <p>Browse cakes, catering platters, and drinks</p>
+  </div>
+</section>
+
+<section class="products-section container">
+  <div class="category-tabs">
+    <button data-category="all" class="active">All</button>
+    <button data-category="cakes">Cakes</button>
+    <button data-category="catering">Catering(Magunanzi)</button>
+    <button data-category="drinks">Drinks</button>
+  </div>
+
+  <input type="text" id="search-input" placeholder="Search products..." />
+
+  <div id="products-container" class="products-grid"></div>
+</section>
+
+<footer>
+  <p>© 2025 Zems Cakes & Catering</p>
+</footer>
+
+<script src="js/main.js"></script>
+
+<footer>
+  <p>© 2025 Zems Cakes & Catering</p>
+</footer>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let index = 0;
+
+  setInterval(() => {
+    slides[index].classList.remove('active');
+    index = (index + 1) % slides.length;
+    slides[index].classList.add('active');
+  }, 3000);
+</script>
+
+</body>
+</html>
